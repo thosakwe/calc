@@ -94,6 +94,10 @@ void scan(vector<Token *> *tokens, string source)
         vector<Token *> potential;
         char ch = str[i];
 
+        #if(DEBUG)
+        cout << "i: " << i << ", ch: " << ch << endl;
+        #endif
+
         if (ch == '(')
             potential.push_back(new Token(LPAREN, &ch));
         if (ch == ')')
@@ -120,6 +124,14 @@ void scan(vector<Token *> *tokens, string source)
         }
 
         long pSize = potential.size();
+        #if(DEBUG)
+        cout << "pSize: " << pSize << endl;
+
+        for (long i = 0; i < pSize; i++) {
+            Token *token = potential.at(i);
+            cout << " * Token #" << i + 1 << ": " << (long) (token->getText()) << endl;
+        }
+        #endif
 
         if (pSize > 0) {
             Token *longest;

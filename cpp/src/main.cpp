@@ -6,6 +6,10 @@
 using namespace std;
 
 int main(int argc, char** argv) {
+    #if(DEBUG)
+    cout << "RUNNING DEBUG" << endl;
+    #endif
+
     string line;
 
     while (true) {

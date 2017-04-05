@@ -5,11 +5,15 @@ all: clean
 	g++ $(SOURCES) -o bin/calc
 
 clean:
+	clear
 	rm -rf bin
 
 debug: clean
 	mkdir -p bin
-	g++ $(SOURCES) -D debug -o bin/calc
+	g++ $(SOURCES) -D DEBUG -o bin/calc
+
+run-debug: debug
+	bin/calc
 
 run: all
 	bin/calc

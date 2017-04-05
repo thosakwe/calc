@@ -2,6 +2,9 @@
 #define H_SCAN
 #include <cstring>
 #include <cctype>
+#if(DEBUG)
+#include <iostream>
+#endif
 #include <string>
 #include <vector>
 #include "token_type.h"
