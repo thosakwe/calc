@@ -10,7 +10,7 @@ final Map<Pattern, TokenType> _patterns = {
   '/': TokenType.SLASH,
   '+': TokenType.PLUS,
   '-': TokenType.MINUS,
-  new RegExp(r'-?[0-9]+(\.[0-9]+)?'): TokenType.NUMBER
+  new RegExp(r'(-?[0-9]+(\.[0-9]+)?)|(-?\.([0-9]+))'): TokenType.NUMBER
 };
 
 List<Token<TokenType>> scan(String text, {sourceUrl}) {

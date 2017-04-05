@@ -18,9 +18,9 @@ main() {
       var result = parser.expression().solve();
       print('Result: $result');
       stdout.write(PROMPT);
-    } catch (e, st) {
+    } catch (e) {
       sub.cancel();
-      stderr..writeln('Whoops, something went wrong.')..writeln(e)..writeln(st);
+      stderr..writeln('Whoops, something went wrong.')..writeln(e);
       exit(1);
     }
   });
