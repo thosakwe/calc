@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "*.blade": "blade",
+        ".analysis-options": "yaml",
+        "*.yaml": "yaml",
+        "*.mustache": "handlebars",
+        "iostream": "cpp",
+        "exception": "cpp",
+        "new": "cpp",
+        "typeinfo": "cpp",
+        "*.tcc": "cpp"
+    }
+}
